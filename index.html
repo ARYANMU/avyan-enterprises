@@ -1,0 +1,1060 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Avyan Enterprises – Your Solar Partner | Uttar Pradesh</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,800;0,900;1,700;1,800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<!-- Font Awesome for social icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<style>
+:root {
+  --amber:#F59E0B; --amber2:#D97706; --amber3:#B45309;
+  --green:#16A34A; --green2:#15803D; --green3:#14532D;
+  --orange:#EA580C; --dark:#0C0C0A; --dark2:#161614; --dark3:#1E1E1B;
+  --cream:#FFFBF3; --cream2:#FFF7E6; --stone:#F5F0E8;
+  --white:#FFFFFF; --text:#1C1917; --muted:#78716C; --light:#A8A29E; --border:#E7E0D5;
+  --font-display:"Playfair Display",Georgia,serif;
+  --font-body:"Plus Jakarta Sans",sans-serif;
+  --radius-sm:10px; --radius:18px; --radius-lg:28px; --radius-xl:40px;
+  --shadow-sm:0 2px 12px rgba(0,0,0,.06); --shadow:0 8px 32px rgba(0,0,0,.10);
+  --shadow-lg:0 24px 64px rgba(0,0,0,.14); --shadow-xl:0 40px 90px rgba(0,0,0,.20);
+  --transition:.3s cubic-bezier(.4,0,.2,1);
+}
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;font-size:16px;}
+body{font-family:var(--font-body);background:var(--cream);color:var(--text);overflow-x:hidden;line-height:1.6;}
+img{max-width:100%;display:block;}
+a{text-decoration:none;color:inherit;}
+ul{list-style:none;}
+::-webkit-scrollbar{width:5px;}
+::-webkit-scrollbar-track{background:var(--dark2);}
+::-webkit-scrollbar-thumb{background:var(--amber);border-radius:99px;}
+
+/* TYPOGRAPHY */
+.display-xl{font-family:var(--font-display);font-size:clamp(3rem,6.5vw,5.8rem);font-weight:900;line-height:1.03;letter-spacing:-0.02em;}
+.display-lg{font-family:var(--font-display);font-size:clamp(2.2rem,4vw,3.8rem);font-weight:800;line-height:1.08;letter-spacing:-0.01em;}
+.display-md{font-family:var(--font-display);font-size:clamp(1.8rem,3vw,2.8rem);font-weight:800;line-height:1.12;}
+.display-sm{font-family:var(--font-display);font-size:clamp(1.4rem,2vw,1.9rem);font-weight:700;line-height:1.2;}
+.body-lg{font-size:clamp(.95rem,1.5vw,1.1rem);line-height:1.8;}
+.body-md{font-size:.95rem;line-height:1.75;}
+.body-sm{font-size:.85rem;line-height:1.7;}
+.amber{color:var(--amber);} .green-c{color:var(--green);} .white{color:var(--white);} .muted{color:var(--muted);} .italic{font-style:italic;}
+.container{max-width:1280px;margin:0 auto;padding:0 24px;}
+.section-pad{padding:100px 0;}
+
+/* PILL */
+.pill{display:inline-flex;align-items:center;gap:8px;padding:6px 16px;border-radius:99px;font-family:var(--font-body);font-size:.72rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;}
+.pill-amber{background:rgba(245,158,11,.12);border:1px solid rgba(245,158,11,.3);color:var(--amber);}
+.pill-green{background:rgba(22,163,74,.12);border:1px solid rgba(22,163,74,.3);color:var(--green);}
+.pill-white{background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.25);color:var(--white);}
+.pill-dot{width:7px;height:7px;border-radius:50%;background:currentColor;animation:blink 2s infinite;}
+@keyframes blink{0%,100%{opacity:1;transform:scale(1);}50%{opacity:.4;transform:scale(1.4);}}
+
+/* BUTTONS */
+.btn{display:inline-flex;align-items:center;gap:9px;border:none;cursor:pointer;font-family:var(--font-body);font-weight:700;border-radius:99px;transition:var(--transition);white-space:nowrap;}
+.btn-lg{font-size:1rem;padding:16px 36px;}
+.btn-md{font-size:.9rem;padding:12px 26px;}
+.btn-amber{background:linear-gradient(135deg,var(--amber),var(--amber2));color:#1a0f00;box-shadow:0 4px 20px rgba(245,158,11,.35);}
+.btn-amber:hover{transform:translateY(-2px);box-shadow:0 10px 36px rgba(245,158,11,.5);}
+.btn-ghost-white{background:rgba(255,255,255,.1);color:var(--white);border:1.5px solid rgba(255,255,255,.25);backdrop-filter:blur(8px);}
+.btn-ghost-white:hover{background:rgba(255,255,255,.18);border-color:rgba(255,255,255,.5);}
+.btn-ghost-dark{background:transparent;color:var(--text);border:1.5px solid var(--border);}
+.btn-ghost-dark:hover{border-color:var(--amber);color:var(--amber2);}
+.btn-green{background:linear-gradient(135deg,var(--green),var(--green2));color:var(--white);box-shadow:0 4px 20px rgba(22,163,74,.3);}
+.btn-green:hover{transform:translateY(-2px);box-shadow:0 10px 36px rgba(22,163,74,.45);}
+
+/* NAV */
+#nav{position:fixed;top:0;left:0;right:0;z-index:1000;padding:0 24px;transition:var(--transition);}
+#nav.scrolled{background:rgba(12,12,10,.96);backdrop-filter:blur(20px);border-bottom:1px solid rgba(245,158,11,.12);box-shadow:0 4px 30px rgba(0,0,0,.4);}
+.nav-inner{max-width:1280px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:72px;gap:32px;}
+/* LOGO – use actual PNG */
+.nav-logo{display:flex;align-items:center;flex-shrink:0;}
+.nav-logo img.logo-icon{height:48px;width:auto;object-fit:contain;}
+.nav-links{display:flex;gap:6px;align-items:center;}
+.nav-links a{font-size:.88rem;font-weight:600;color:rgba(255,255,255,.65);padding:7px 14px;border-radius:8px;transition:var(--transition);}
+.nav-links a:hover{color:var(--amber);background:rgba(245,158,11,.08);}
+.nav-links a.active{color:var(--amber);}
+.nav-cta{flex-shrink:0;}
+.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:8px;border-radius:8px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.12);transition:var(--transition);}
+.hamburger span{display:block;width:22px;height:2px;background:var(--white);border-radius:2px;transition:var(--transition);}
+.hamburger.open span:nth-child(1){transform:rotate(45deg) translate(5px,5px);}
+.hamburger.open span:nth-child(2){opacity:0;transform:scaleX(0);}
+.hamburger.open span:nth-child(3){transform:rotate(-45deg) translate(5px,-5px);}
+.mobile-menu{display:none;position:fixed;top:72px;left:0;right:0;background:rgba(12,12,10,.98);backdrop-filter:blur(20px);border-bottom:1px solid rgba(245,158,11,.12);padding:20px 24px 28px;z-index:999;flex-direction:column;gap:4px;}
+.mobile-menu.open{display:flex;}
+.mobile-menu a{font-size:1rem;font-weight:600;color:rgba(255,255,255,.7);padding:14px 16px;border-radius:var(--radius-sm);transition:var(--transition);border-bottom:1px solid rgba(255,255,255,.06);}
+.mobile-menu a:hover{color:var(--amber);background:rgba(245,158,11,.08);}
+.mobile-menu .mob-cta{margin-top:12px;}
+
+/* HERO */
+#hero{min-height:100vh;position:relative;display:flex;align-items:center;overflow:hidden;padding-top:72px;}
+.hero-bg-img{position:absolute;inset:0;background-image:url("https://images.unsplash.com/photo-1509391366360-2e959784a276?w=1920&q=80");background-size:cover;background-position:center 30%;background-attachment:fixed;}
+.hero-overlay{position:absolute;inset:0;background:linear-gradient(105deg,rgba(12,12,10,.92) 0%,rgba(12,12,10,.82) 45%,rgba(12,12,10,.55) 100%);}
+.hero-overlay2{position:absolute;inset:0;background:linear-gradient(to top,rgba(12,12,10,.9) 0%,transparent 50%);}
+.hero-rays{position:absolute;inset:0;pointer-events:none;background:conic-gradient(from 200deg at 75% 48%,transparent 0deg,rgba(245,158,11,.04) 10deg,transparent 20deg,rgba(245,158,11,.03) 35deg,transparent 45deg);}
+.hero-inner{position:relative;z-index:2;width:100%;max-width:1280px;margin:0 auto;padding:80px 24px;display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center;}
+.hero-left{max-width:620px;}
+.hero-pill{margin-bottom:28px;}
+.hero-title{color:var(--white);margin-bottom:24px;animation:fadeUp .9s ease both;}
+.hero-title em{font-style:italic;color:var(--amber);position:relative;}
+.hero-title em::after{content:"";position:absolute;left:0;right:0;bottom:-4px;height:3px;background:linear-gradient(90deg,var(--amber),transparent);border-radius:99px;}
+.hero-sub{color:rgba(255,255,255,.62);margin-bottom:44px;animation:fadeUp .9s .12s ease both;max-width:520px;}
+.hero-btns{display:flex;gap:14px;flex-wrap:wrap;animation:fadeUp .9s .22s ease both;margin-bottom:60px;}
+.hero-stats{display:flex;gap:0;animation:fadeUp .9s .32s ease both;border-top:1px solid rgba(255,255,255,.1);padding-top:36px;}
+.hstat{flex:1;padding-right:28px;border-right:1px solid rgba(255,255,255,.1);}
+.hstat:last-child{border-right:none;padding-right:0;padding-left:28px;}
+.hstat:first-child{padding-left:0;}
+.hstat-num{font-family:var(--font-display);font-size:2.2rem;font-weight:900;color:var(--amber);line-height:1;}
+.hstat-lbl{font-size:.75rem;color:rgba(255,255,255,.45);margin-top:4px;font-weight:600;letter-spacing:.04em;}
+.hero-right{display:flex;flex-direction:column;gap:16px;animation:fadeUp .9s .2s ease both;}
+.hero-card{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:var(--radius-lg);padding:28px;backdrop-filter:blur(14px);transition:var(--transition);}
+.hero-card:hover{background:rgba(255,255,255,.1);border-color:rgba(245,158,11,.3);transform:translateX(6px);}
+.hcard-row{display:flex;align-items:center;gap:16px;}
+.hcard-icon{width:52px;height:52px;border-radius:14px;display:flex;align-items:center;justify-content:center;font-size:1.5rem;flex-shrink:0;}
+.hcard-icon-amber{background:linear-gradient(135deg,rgba(245,158,11,.25),rgba(245,158,11,.1));}
+.hcard-icon-green{background:linear-gradient(135deg,rgba(22,163,74,.25),rgba(22,163,74,.1));}
+.hcard-icon-blue{background:linear-gradient(135deg,rgba(59,130,246,.25),rgba(59,130,246,.1));}
+.hcard-title{font-family:var(--font-display);font-size:1.08rem;font-weight:700;color:var(--white);margin-bottom:3px;}
+.hcard-sub{font-size:.8rem;color:rgba(255,255,255,.5);}
+.hcard-badge{margin-left:auto;background:rgba(245,158,11,.15);border:1px solid rgba(245,158,11,.25);color:var(--amber);font-size:.7rem;font-weight:700;padding:4px 10px;border-radius:99px;white-space:nowrap;}
+@keyframes fadeUp{from{opacity:0;transform:translateY(32px);}to{opacity:1;transform:translateY(0);}}
+
+/* FREE SITE SURVEY STRIP */
+.survey-strip{background:linear-gradient(135deg,var(--green3),var(--green2));padding:20px 0;}
+.survey-strip-inner{max-width:1280px;margin:0 auto;padding:0 24px;display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap;}
+.survey-text{display:flex;align-items:center;gap:14px;}
+.survey-icon{font-size:2rem;}
+.survey-title{font-family:var(--font-display);font-size:1.1rem;font-weight:800;color:var(--white);}
+.survey-sub{font-size:.82rem;color:rgba(255,255,255,.72);}
+
+/* SECTION HEADERS */
+.sec-header{margin-bottom:64px;}
+.sec-header.center{text-align:center;}
+.sec-header.center .intro-text{margin:0 auto;}
+.sec-title{color:var(--text);margin-bottom:16px;}
+.sec-title.white-title{color:var(--white);}
+.intro-text{max-width:580px;color:var(--muted);}
+.intro-text.white-sub{color:rgba(255,255,255,.55);}
+
+/* SCROLL REVEAL */
+[data-reveal]{opacity:0;transform:translateY(30px);transition:opacity .7s ease,transform .7s ease;}
+[data-reveal].revealed{opacity:1;transform:translateY(0);}
+[data-reveal][data-delay="1"]{transition-delay:.1s;}
+[data-reveal][data-delay="2"]{transition-delay:.2s;}
+[data-reveal][data-delay="3"]{transition-delay:.3s;}
+[data-reveal][data-delay="4"]{transition-delay:.4s;}
+
+/* ABOUT */
+#about{background:var(--white);}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center;}
+.photo-mosaic{display:grid;grid-template-columns:1fr 1fr;grid-template-rows:auto auto;gap:14px;position:relative;}
+.mosaic-img{border-radius:var(--radius);overflow:hidden;position:relative;}
+.mosaic-img img{width:100%;height:100%;object-fit:cover;transition:transform .6s ease;}
+.mosaic-img:hover img{transform:scale(1.04);}
+.mosaic-main{grid-row:1/3;height:420px;}
+.mosaic-top{height:196px;}
+.mosaic-bot{height:196px;}
+.mosaic-badge{position:absolute;bottom:-20px;left:50%;transform:translateX(-50%);background:linear-gradient(135deg,var(--amber),var(--amber2));color:#1a0f00;border-radius:var(--radius);padding:16px 24px;text-align:center;box-shadow:0 16px 40px rgba(245,158,11,.4);white-space:nowrap;z-index:2;}
+.mosaic-badge .badge-num{font-family:var(--font-display);font-size:2rem;font-weight:900;display:block;line-height:1;}
+.mosaic-badge .badge-txt{font-size:.72rem;font-weight:700;opacity:.8;letter-spacing:.05em;}
+.about-copy{padding-left:16px;}
+.feature-list{margin-top:36px;display:flex;flex-direction:column;gap:20px;}
+.feature-item{display:flex;gap:16px;align-items:flex-start;}
+.fi-icon{width:44px;height:44px;border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:1.15rem;flex-shrink:0;background:linear-gradient(135deg,rgba(245,158,11,.15),rgba(245,158,11,.05));border:1px solid rgba(245,158,11,.2);}
+.fi-title{font-weight:700;font-size:.95rem;margin-bottom:3px;color:var(--text);}
+.fi-desc{font-size:.84rem;color:var(--muted);line-height:1.6;}
+.about-cta-row{margin-top:40px;display:flex;gap:16px;align-items:center;flex-wrap:wrap;}
+.trust-text{font-size:.82rem;color:var(--muted);}
+.trust-text strong{color:var(--text);}
+
+/* SOLUTIONS */
+#solutions{background:var(--dark);position:relative;overflow:hidden;}
+.solutions-bg{position:absolute;inset:0;pointer-events:none;background:radial-gradient(ellipse 60% 50% at 80% 20%,rgba(245,158,11,.06) 0%,transparent 60%),radial-gradient(ellipse 40% 50% at 10% 80%,rgba(22,163,74,.05) 0%,transparent 55%);}
+.sol-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
+.sol-card{border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(255,255,255,.07);background:rgba(255,255,255,.03);transition:var(--transition);position:relative;display:flex;flex-direction:column;}
+.sol-card:hover{transform:translateY(-10px);border-color:rgba(245,158,11,.3);box-shadow:0 30px 60px rgba(0,0,0,.4);}
+.sol-photo{position:relative;height:210px;overflow:hidden;flex-shrink:0;}
+.sol-photo img{width:100%;height:100%;object-fit:cover;transition:transform .6s ease;filter:brightness(.75) saturate(.8);}
+.sol-card:hover .sol-photo img{transform:scale(1.06);filter:brightness(.85) saturate(1);}
+.sol-photo-overlay{position:absolute;inset:0;background:linear-gradient(to bottom,transparent 30%,rgba(12,12,10,.85) 100%);}
+.sol-photo-tag{position:absolute;top:16px;left:16px;}
+.sol-photo-icon{position:absolute;bottom:16px;right:16px;width:48px;height:48px;border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:1.4rem;backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,.2);}
+.icon-on{background:rgba(22,163,74,.3);}
+.icon-off{background:rgba(59,130,246,.3);}
+.icon-hyb{background:rgba(245,158,11,.3);}
+.sol-body{padding:28px;flex:1;display:flex;flex-direction:column;}
+.sol-name{font-family:var(--font-display);font-size:1.5rem;font-weight:800;color:var(--white);margin-bottom:10px;}
+.sol-desc{font-size:.87rem;color:rgba(255,255,255,.52);line-height:1.75;margin-bottom:22px;}
+.sol-feats{display:flex;flex-direction:column;gap:8px;margin-bottom:24px;}
+.sol-feat{display:flex;gap:9px;align-items:flex-start;}
+.feat-check{width:18px;height:18px;border-radius:5px;background:rgba(245,158,11,.15);border:1px solid rgba(245,158,11,.3);display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px;}
+.feat-check svg{width:10px;height:10px;}
+.feat-text{font-size:.83rem;color:rgba(255,255,255,.68);line-height:1.5;}
+.sol-price{margin-top:auto;padding:16px 20px;border-radius:var(--radius-sm);background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08);}
+.sol-price-label{font-size:.7rem;color:rgba(255,255,255,.38);margin-bottom:3px;text-transform:uppercase;letter-spacing:.07em;}
+.sol-price-val{font-family:var(--font-display);font-size:1rem;font-weight:700;color:var(--amber);}
+
+/* SUBSIDY */
+#subsidy{background:var(--cream);}
+.subsidy-hero{border-radius:var(--radius-xl);overflow:hidden;position:relative;display:grid;grid-template-columns:1fr 1fr;min-height:440px;}
+.sub-photo-side{position:relative;overflow:hidden;}
+.sub-photo-side img{width:100%;height:100%;object-fit:cover;}
+.sub-photo-overlay2{position:absolute;inset:0;background:linear-gradient(90deg,transparent 40%,rgba(20,83,45,.7) 100%);}
+.sub-content-side{background:linear-gradient(135deg,var(--green3),var(--green2));padding:56px 48px;display:flex;flex-direction:column;justify-content:center;position:relative;overflow:hidden;}
+.sub-content-side::before{content:"";position:absolute;top:-80px;right:-80px;width:300px;height:300px;border-radius:50%;background:rgba(255,255,255,.04);}
+.sub-content-side::after{content:"";position:absolute;bottom:-60px;left:-60px;width:240px;height:240px;border-radius:50%;background:rgba(255,255,255,.03);}
+.sub-title{font-family:var(--font-display);font-size:clamp(1.7rem,2.5vw,2.4rem);font-weight:900;color:var(--white);line-height:1.12;margin-bottom:14px;position:relative;z-index:1;}
+.sub-desc{color:rgba(255,255,255,.7);font-size:.92rem;line-height:1.75;margin-bottom:32px;position:relative;z-index:1;}
+.sub-slabs{display:flex;flex-direction:column;gap:12px;position:relative;z-index:1;}
+.slab{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.15);border-radius:var(--radius);padding:16px 20px;display:flex;align-items:center;justify-content:space-between;backdrop-filter:blur(8px);transition:var(--transition);}
+.slab:hover{background:rgba(255,255,255,.16);transform:translateX(4px);}
+.slab-label{font-size:.82rem;color:rgba(255,255,255,.65);font-weight:500;}
+.slab-amount{font-family:var(--font-display);font-size:1.3rem;font-weight:900;color:var(--amber);}
+.sub-cta-row{margin-top:28px;display:flex;gap:12px;flex-wrap:wrap;position:relative;z-index:1;}
+.steps-row{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;margin-top:64px;}
+.step-item{text-align:center;position:relative;}
+.step-item::after{content:"→";position:absolute;right:-14px;top:22px;font-size:1.2rem;color:rgba(245,158,11,.3);}
+.step-item:last-child::after{display:none;}
+.step-num{width:52px;height:52px;border-radius:50%;background:linear-gradient(135deg,var(--amber),var(--amber2));display:flex;align-items:center;justify-content:center;font-family:var(--font-display);font-size:1.2rem;font-weight:900;color:#1a0f00;margin:0 auto 18px;box-shadow:0 8px 20px rgba(245,158,11,.35);}
+.step-name{font-family:var(--font-display);font-size:1rem;font-weight:700;color:var(--text);margin-bottom:8px;}
+.step-desc{font-size:.82rem;color:var(--muted);line-height:1.65;}
+
+/* WHY */
+#why{background:var(--stone);}
+.why-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
+.why-card{background:var(--white);border-radius:var(--radius-lg);padding:36px 30px;border:1.5px solid var(--border);transition:var(--transition);position:relative;overflow:hidden;}
+.why-card::before{content:"";position:absolute;top:-30px;right:-30px;width:100px;height:100px;border-radius:50%;background:radial-gradient(circle,rgba(245,158,11,.08) 0%,transparent 70%);transition:var(--transition);}
+.why-card:hover{border-color:var(--amber);transform:translateY(-5px);box-shadow:var(--shadow-lg);}
+.why-card:hover::before{transform:scale(2.5);opacity:.5;}
+.why-emoji{font-size:2.4rem;margin-bottom:20px;display:block;}
+.why-title{font-family:var(--font-display);font-size:1.15rem;font-weight:700;color:var(--text);margin-bottom:10px;}
+.why-desc{font-size:.86rem;color:var(--muted);line-height:1.72;}
+
+/* GALLERY */
+#gallery{background:var(--dark2);overflow:hidden;padding:0;}
+.gallery-strip{display:flex;gap:16px;padding:48px 24px;overflow-x:auto;scrollbar-width:none;cursor:grab;}
+.gallery-strip:active{cursor:grabbing;}
+.gallery-strip::-webkit-scrollbar{display:none;}
+.gallery-item{flex-shrink:0;width:320px;height:220px;border-radius:var(--radius-lg);overflow:hidden;position:relative;}
+.gallery-item img{width:100%;height:100%;object-fit:cover;transition:transform .6s ease;filter:brightness(.75);}
+.gallery-item:hover img{transform:scale(1.06);filter:brightness(.9);}
+.gallery-item-cap{position:absolute;bottom:0;left:0;right:0;padding:12px 16px;background:linear-gradient(to top,rgba(0,0,0,.7) 0%,transparent 100%);color:rgba(255,255,255,.85);font-size:.78rem;font-weight:600;}
+
+/* PROCESS */
+#process{background:var(--dark);position:relative;overflow:hidden;}
+.process-bg{position:absolute;inset:0;pointer-events:none;background:radial-gradient(ellipse 70% 60% at 50% 50%,rgba(245,158,11,.04) 0%,transparent 65%);}
+.process-grid{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center;}
+.process-photo{border-radius:var(--radius-xl);overflow:hidden;height:520px;position:relative;}
+.process-photo img{width:100%;height:100%;object-fit:cover;filter:brightness(.7);}
+.process-photo-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(12,12,10,.8) 0%,transparent 50%);}
+.process-cert{position:absolute;bottom:28px;left:28px;right:28px;background:rgba(255,255,255,.08);backdrop-filter:blur(16px);border:1px solid rgba(255,255,255,.15);border-radius:var(--radius);padding:20px 24px;display:flex;align-items:center;gap:16px;}
+.process-cert-icon{font-size:2rem;}
+.process-cert-text{color:var(--white);}
+.process-cert-text strong{font-weight:700;display:block;margin-bottom:2px;}
+.process-cert-text span{font-size:.8rem;opacity:.6;}
+.process-steps{display:flex;flex-direction:column;gap:20px;}
+.pstep{display:flex;gap:20px;align-items:flex-start;padding:24px;border-radius:var(--radius);border:1px solid rgba(255,255,255,.07);background:rgba(255,255,255,.03);transition:var(--transition);}
+.pstep:hover{border-color:rgba(245,158,11,.25);background:rgba(245,158,11,.04);transform:translateX(6px);}
+.pstep-num{width:42px;height:42px;border-radius:12px;flex-shrink:0;background:linear-gradient(135deg,rgba(245,158,11,.2),rgba(245,158,11,.08));border:1px solid rgba(245,158,11,.25);display:flex;align-items:center;justify-content:center;font-family:var(--font-display);font-size:1.1rem;font-weight:900;color:var(--amber);}
+.pstep-title{font-family:var(--font-display);font-size:1rem;font-weight:700;color:var(--white);margin-bottom:5px;}
+.pstep-desc{font-size:.83rem;color:rgba(255,255,255,.52);line-height:1.65;}
+
+/* =====================
+   LEAD FORM SECTION
+===================== */
+#lead-form-section{background:var(--dark2);position:relative;overflow:hidden;}
+.lead-form-bg{position:absolute;inset:0;background:radial-gradient(ellipse 70% 60% at 50% 30%,rgba(245,158,11,.07) 0%,transparent 65%);}
+.lead-form-wrapper{display:grid;grid-template-columns:1fr 1.4fr;gap:64px;align-items:center;position:relative;z-index:1;}
+.lead-left h2{color:var(--white);margin-bottom:16px;}
+.lead-left p{color:rgba(255,255,255,.55);font-size:.95rem;line-height:1.8;margin-bottom:32px;}
+.lead-benefits{display:flex;flex-direction:column;gap:14px;}
+.lead-benefit{display:flex;gap:12px;align-items:center;}
+.lead-benefit-icon{width:36px;height:36px;border-radius:10px;background:rgba(245,158,11,.12);border:1px solid rgba(245,158,11,.2);display:flex;align-items:center;justify-content:center;font-size:.95rem;flex-shrink:0;}
+.lead-benefit-text{font-size:.88rem;color:rgba(255,255,255,.7);font-weight:500;}
+
+/* The actual form card */
+.lead-form-card{background:var(--white);border-radius:var(--radius-xl);padding:44px;box-shadow:0 40px 80px rgba(0,0,0,.4);}
+.lead-form-header{margin-bottom:28px;}
+.lead-form-title{font-family:var(--font-display);font-size:1.7rem;font-weight:800;color:var(--text);margin-bottom:6px;}
+.lead-form-sub{font-size:.88rem;color:var(--muted);}
+.form-row2{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
+.form-group{margin-bottom:18px;}
+.form-label{display:block;font-size:.74rem;font-weight:700;color:var(--text);letter-spacing:.08em;text-transform:uppercase;margin-bottom:7px;}
+.form-input,.form-select,.form-textarea{width:100%;padding:13px 16px;border-radius:var(--radius-sm);font-size:.92rem;font-family:var(--font-body);border:1.5px solid var(--border);background:var(--cream);color:var(--text);transition:var(--transition);outline:none;appearance:none;}
+.form-input:focus,.form-select:focus,.form-textarea:focus{border-color:var(--amber);background:var(--white);box-shadow:0 0 0 4px rgba(245,158,11,.1);}
+.form-input::placeholder{color:var(--light);}
+.form-textarea{resize:vertical;min-height:100px;}
+.form-submit-btn{width:100%;padding:16px;border-radius:var(--radius);border:none;cursor:pointer;font-family:var(--font-body);font-weight:700;font-size:1rem;background:linear-gradient(135deg,var(--amber),var(--amber2));color:#1a0f00;transition:var(--transition);display:flex;align-items:center;justify-content:center;gap:10px;box-shadow:0 4px 20px rgba(245,158,11,.3);}
+.form-submit-btn:hover{transform:translateY(-2px);box-shadow:0 10px 36px rgba(245,158,11,.5);}
+.form-submit-btn:disabled{opacity:.6;cursor:not-allowed;transform:none;}
+
+/* SUCCESS MODAL / NOTIFICATION */
+.notif-overlay{position:fixed;inset:0;background:rgba(0,0,0,.7);backdrop-filter:blur(6px);z-index:9999;display:none;align-items:center;justify-content:center;}
+.notif-overlay.show{display:flex;}
+.notif-card{background:var(--white);border-radius:var(--radius-xl);padding:52px 44px;max-width:480px;width:90%;text-align:center;box-shadow:0 40px 80px rgba(0,0,0,.4);animation:notifPop .4s cubic-bezier(.34,1.56,.64,1) both;}
+@keyframes notifPop{from{opacity:0;transform:scale(.85) translateY(20px);}to{opacity:1;transform:scale(1) translateY(0);}}
+.notif-icon{width:80px;height:80px;border-radius:50%;background:linear-gradient(135deg,var(--green),var(--green2));display:flex;align-items:center;justify-content:center;font-size:2.2rem;margin:0 auto 24px;box-shadow:0 12px 30px rgba(22,163,74,.4);animation:iconBounce .6s .2s cubic-bezier(.34,1.56,.64,1) both;}
+@keyframes iconBounce{from{transform:scale(0);}to{transform:scale(1);}}
+.notif-title{font-family:var(--font-display);font-size:1.8rem;font-weight:900;color:var(--text);margin-bottom:12px;}
+.notif-sub{font-size:.95rem;color:var(--muted);line-height:1.7;margin-bottom:28px;}
+.notif-detail{background:var(--stone);border-radius:var(--radius);padding:16px 20px;margin-bottom:28px;font-size:.85rem;color:var(--text);line-height:1.6;border:1px solid var(--border);}
+.notif-detail strong{color:var(--amber2);}
+.notif-close-btn{background:linear-gradient(135deg,var(--amber),var(--amber2));color:#1a0f00;font-weight:700;font-size:1rem;padding:14px 36px;border-radius:99px;border:none;cursor:pointer;font-family:var(--font-body);transition:var(--transition);}
+.notif-close-btn:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(245,158,11,.4);}
+
+/* CONTACT */
+#contact{background:var(--cream);}
+.contact-wrapper{display:grid;grid-template-columns:1fr 1.5fr;gap:56px;align-items:start;}
+.c-cards{display:flex;flex-direction:column;gap:16px;}
+.cinfo-card{background:var(--white);border-radius:var(--radius);padding:22px 24px;border:1.5px solid var(--border);display:flex;gap:16px;align-items:flex-start;transition:var(--transition);}
+.cinfo-card:hover{border-color:var(--amber);box-shadow:var(--shadow-sm);}
+.cinfo-icon{width:44px;height:44px;border-radius:12px;flex-shrink:0;background:linear-gradient(135deg,var(--amber),var(--amber2));display:flex;align-items:center;justify-content:center;font-size:1.1rem;color:#1a0f00;}
+.cinfo-title{font-weight:700;font-size:.92rem;color:var(--text);margin-bottom:3px;}
+.cinfo-val,.cinfo-card a{font-size:.85rem;color:var(--muted);display:block;line-height:1.6;text-decoration:none;transition:var(--transition);}
+.cinfo-card a:hover{color:var(--amber2);}
+.govt-card{background:linear-gradient(135deg,var(--green3),var(--green2));border-radius:var(--radius);padding:24px;border:none;display:flex;gap:16px;align-items:flex-start;}
+.govt-card .cinfo-title{color:var(--amber);}
+.govt-card .cinfo-val{color:rgba(255,255,255,.7);}
+.contact-form-box{background:var(--white);border-radius:var(--radius-lg);padding:48px;border:1.5px solid var(--border);box-shadow:var(--shadow);}
+.contact-form-box .lead-form-title{font-family:var(--font-display);font-size:1.6rem;font-weight:800;color:var(--text);margin-bottom:6px;}
+
+/* FOOTER */
+#footer{background:var(--dark);padding:64px 24px 28px;}
+.footer-inner{max-width:1280px;margin:0 auto;}
+.footer-grid{display:grid;grid-template-columns:2.2fr 1fr 1fr 1fr;gap:56px;margin-bottom:56px;}
+.footer-brand-logo{display:flex;align-items:center;gap:10px;margin-bottom:18px;}
+.footer-brand-logo img{height:44px;width:auto;object-fit:contain;}
+.footer-brand p{font-size:.85rem;color:rgba(255,255,255,.45);line-height:1.75;max-width:280px;}
+/* Social icons using Font Awesome */
+.footer-social{display:flex;gap:10px;margin-top:24px;}
+.social-btn{width:40px;height:40px;border-radius:10px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.1);display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,.55);transition:var(--transition);cursor:pointer;font-size:.95rem;text-decoration:none;}
+.social-btn:hover{background:rgba(245,158,11,.15);border-color:rgba(245,158,11,.3);color:var(--amber);transform:translateY(-3px);}
+.social-btn.fb:hover{background:rgba(24,119,242,.2);border-color:rgba(24,119,242,.4);color:#1877F2;}
+.social-btn.ig:hover{background:rgba(225,48,108,.2);border-color:rgba(225,48,108,.4);color:#E1306C;}
+.social-btn.yt:hover{background:rgba(255,0,0,.2);border-color:rgba(255,0,0,.4);color:#FF0000;}
+.social-btn.wa:hover{background:rgba(37,211,102,.2);border-color:rgba(37,211,102,.4);color:#25D366;}
+.footer-col h5{font-family:var(--font-display);font-size:.85rem;font-weight:700;color:var(--white);margin-bottom:20px;text-transform:uppercase;letter-spacing:.08em;}
+.footer-col ul{display:flex;flex-direction:column;gap:10px;}
+.footer-col a{font-size:.85rem;color:rgba(255,255,255,.45);transition:var(--transition);}
+.footer-col a:hover{color:var(--amber);padding-left:4px;}
+.footer-bottom{border-top:1px solid rgba(255,255,255,.07);padding-top:24px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;}
+.footer-bottom p{font-size:.8rem;color:rgba(255,255,255,.35);}
+.footer-badge{background:rgba(245,158,11,.1);border:1px solid rgba(245,158,11,.25);border-radius:99px;padding:6px 16px;font-size:.72rem;font-weight:700;color:var(--amber);letter-spacing:.05em;}
+
+/* WA FLOAT */
+.wa-float{position:fixed;bottom:28px;right:28px;z-index:1001;display:flex;flex-direction:column;align-items:flex-end;gap:10px;}
+.wa-btn{width:58px;height:58px;border-radius:50%;background:#25D366;display:flex;align-items:center;justify-content:center;font-size:1.5rem;box-shadow:0 8px 28px rgba(37,211,102,.5);transition:var(--transition);cursor:pointer;text-decoration:none;color:white;animation:waPop 2s ease-in-out infinite;}
+@keyframes waPop{0%,100%{box-shadow:0 8px 28px rgba(37,211,102,.5);}50%{box-shadow:0 8px 40px rgba(37,211,102,.75);}}
+.wa-btn:hover{transform:scale(1.12) rotate(-5deg);}
+.wa-label{background:var(--dark);color:var(--white);font-size:.78rem;font-weight:600;padding:6px 12px;border-radius:8px;border:1px solid rgba(255,255,255,.1);white-space:nowrap;opacity:0;transform:translateX(10px);transition:var(--transition);}
+.wa-float:hover .wa-label{opacity:1;transform:translateX(0);}
+
+/* RESPONSIVE */
+@media(max-width:1024px){
+  .hero-inner{grid-template-columns:1fr;gap:40px;padding:60px 24px;}
+  .hero-right{display:none;}
+  .about-grid{grid-template-columns:1fr;gap:48px;}
+  .photo-mosaic{max-width:500px;margin:0 auto;}
+  .sol-grid{grid-template-columns:1fr;max-width:520px;margin:0 auto;}
+  .subsidy-hero{grid-template-columns:1fr;}
+  .sub-photo-side{height:250px;}
+  .steps-row{grid-template-columns:1fr 1fr;gap:32px;}
+  .step-item::after{display:none;}
+  .why-grid{grid-template-columns:1fr 1fr;}
+  .process-grid{grid-template-columns:1fr;}
+  .process-photo{height:340px;}
+  .contact-wrapper{grid-template-columns:1fr;}
+  .footer-grid{grid-template-columns:1fr 1fr;gap:36px;}
+  .lead-form-wrapper{grid-template-columns:1fr;gap:40px;}
+}
+@media(max-width:768px){
+  .nav-links,.nav-cta{display:none;}
+  .hamburger{display:flex;}
+  .section-pad{padding:72px 0;}
+  .sol-grid{max-width:100%;}
+  .hero-stats{flex-wrap:wrap;}
+  .hstat{flex:0 0 50%;padding:16px 16px 16px 0;border-right:none;border-bottom:1px solid rgba(255,255,255,.1);}
+  .hstat:nth-child(2){padding-left:16px;border-left:1px solid rgba(255,255,255,.1);}
+  .hstat:nth-child(3),.hstat:nth-child(4){border-bottom:none;padding-top:16px;}
+  .hstat:last-child{padding-left:16px;border-left:1px solid rgba(255,255,255,.1);}
+  .why-grid{grid-template-columns:1fr;}
+  .steps-row{grid-template-columns:1fr;}
+  .contact-form-box{padding:28px 20px;}
+  .lead-form-card{padding:28px 20px;}
+  .footer-grid{grid-template-columns:1fr;gap:32px;}
+  .gallery-item{width:260px;height:180px;}
+  .about-copy{padding-left:0;}
+  .form-row2{grid-template-columns:1fr;}
+}
+@media(max-width:480px){
+  .display-xl{font-size:2.4rem;}
+  .hero-btns{flex-direction:column;}
+  .btn-lg{width:100%;justify-content:center;}
+  .hero-inner{padding:40px 16px 60px;}
+  .sub-content-side{padding:36px 24px;}
+  .sub-cta-row{flex-direction:column;}
+  .section-pad{padding:56px 0;}
+  .mosaic-main{height:300px;}
+  .mosaic-top,.mosaic-bot{height:140px;}
+}
+</style>
+</head>
+<body>
+
+<!-- NOTIFICATION MODAL -->
+<div class="notif-overlay" id="notifOverlay">
+  <div class="notif-card">
+    <div class="notif-icon">✅</div>
+    <div class="notif-title">Shukriya! 🙏</div>
+    <p class="notif-sub">Aapki request successfully submit ho gayi. Hamare solar expert <strong>24 ghante ke andar</strong> aapse contact karenge!</p>
+    <div class="notif-detail" id="notifDetail">
+      <!-- filled by JS -->
+    </div>
+    <p style="font-size:.82rem;color:var(--muted);margin-bottom:20px;">
+      Abhi baat karna chahte hain? Hume WhatsApp karein ya call karein:
+    </p>
+    <a href="https://wa.me/919876543210" target="_blank" style="display:inline-flex;align-items:center;gap:8px;background:#25D366;color:white;font-weight:700;padding:12px 28px;border-radius:99px;font-family:var(--font-body);margin-bottom:16px;font-size:.95rem;">
+      <i class="fab fa-whatsapp" style="font-size:1.1rem;"></i> WhatsApp Karein
+    </a><br>
+    <button class="notif-close-btn" onclick="closeNotif()">Done, Shukriya! 🌞</button>
+  </div>
+</div>
+
+<!-- NAV -->
+<nav id="nav">
+  <div class="nav-inner">
+    <a href="#hero" class="nav-logo">
+      <!-- ACTUAL LOGO PNG (white version works on dark nav) -->
+      <img class="logo-icon"
+           src="data:image/png;base64,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"
+           alt="Avyan Enterprises Logo"
+           onerror="this.style.display='none'">
+      <span style="font-family:'Playfair Display',serif;font-size:1.12rem;font-weight:800;color:#fff;letter-spacing:-.01em;line-height:1.1;">
+        Avyan<br><span style="color:var(--amber);">Enterprises</span>
+      </span>
+    </a>
+    <nav class="nav-links">
+      <a href="#about">About</a>
+      <a href="#solutions">Solutions</a>
+      <a href="#subsidy">Subsidy</a>
+      <a href="#why">Why Us</a>
+      <a href="#process">Process</a>
+      <a href="#lead-form-section">Lead Form</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <a href="#lead-form-section" class="btn btn-md btn-amber nav-cta">Get Free Quote</a>
+    <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
+  </div>
+</nav>
+
+<!-- Mobile Menu -->
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#about"            onclick="closeMobileMenu()">About</a>
+  <a href="#solutions"        onclick="closeMobileMenu()">Solutions</a>
+  <a href="#subsidy"          onclick="closeMobileMenu()">Subsidy</a>
+  <a href="#why"              onclick="closeMobileMenu()">Why Us</a>
+  <a href="#process"          onclick="closeMobileMenu()">Process</a>
+  <a href="#lead-form-section" onclick="closeMobileMenu()">Free Quote</a>
+  <a href="#contact"          onclick="closeMobileMenu()">Contact</a>
+  <a href="#lead-form-section" class="btn btn-amber btn-lg mob-cta" onclick="closeMobileMenu()">🌞 Get Free Quote</a>
+</div>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-bg-img"></div>
+  <div class="hero-overlay"></div>
+  <div class="hero-overlay2"></div>
+  <div class="hero-rays"></div>
+  <div class="hero-inner">
+    <div class="hero-left">
+      <div class="hero-pill" data-reveal>
+        <span class="pill pill-amber"><span class="pill-dot"></span>PM Surya Ghar Authorized Vendor · Uttar Pradesh</span>
+      </div>
+      <h1 class="display-xl hero-title" data-reveal data-delay="1">
+        Bijli Bachao,<br><em>Surya Se</em> Kamao,<br>Bhavishya Banao
+      </h1>
+      <p class="body-lg hero-sub" data-reveal data-delay="2">
+        Uttar Pradesh ka sabse trusted solar energy company — On-Grid, Off-Grid &amp; Hybrid solutions with government subsidies up to <strong style="color:var(--amber);">₹1,08,000</strong>. Clean power for every home, farm &amp; business across UP.
+      </p>
+      <div class="hero-btns" data-reveal data-delay="3">
+        <a href="#lead-form-section" class="btn btn-lg btn-amber">🌞 Free Site Survey</a>
+        <a href="#solutions" class="btn btn-lg btn-ghost-white">Explore Solutions →</a>
+      </div>
+      <div class="hero-stats" data-reveal data-delay="4">
+        <div class="hstat"><div class="hstat-num">500+</div><div class="hstat-lbl">Happy Customers</div></div>
+        <div class="hstat"><div class="hstat-num">₹1.08L</div><div class="hstat-lbl">Max Govt. Subsidy</div></div>
+        <div class="hstat"><div class="hstat-num">25 Yr</div><div class="hstat-lbl">Panel Warranty</div></div>
+        <div class="hstat"><div class="hstat-num">300</div><div class="hstat-lbl">Free Units/Month</div></div>
+      </div>
+    </div>
+    <div class="hero-right">
+      <div class="hero-card"><div class="hcard-row"><div class="hcard-icon hcard-icon-amber">⚡</div><div><div class="hcard-title">On-Grid Solar</div><div class="hcard-sub">Grid-tied · Net Metering · Sell to UPPCL</div></div><div class="hcard-badge">Subsidy ₹1.08L</div></div></div>
+      <div class="hero-card"><div class="hcard-row"><div class="hcard-icon hcard-icon-blue">🔋</div><div><div class="hcard-title">Off-Grid Solar</div><div class="hcard-sub">Battery Backup · 24×7 Power · No Grid Needed</div></div><div class="hcard-badge">Rural / Farm</div></div></div>
+      <div class="hero-card"><div class="hcard-row"><div class="hcard-icon hcard-icon-green">🌐</div><div><div class="hcard-title">Hybrid Solar</div><div class="hcard-sub">Grid + Battery · No Load-Shedding Worries</div></div><div class="hcard-badge">Subsidy ₹1.08L</div></div></div>
+      <div class="hero-card" style="background:rgba(245,158,11,.08);border-color:rgba(245,158,11,.2);"><div class="hcard-row"><div class="hcard-icon" style="background:rgba(245,158,11,.2);">🏛️</div><div><div class="hcard-title" style="color:var(--amber)">PM Surya Ghar Authorized</div><div class="hcard-sub">Registered on National Rooftop Solar Portal</div></div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- FREE SITE SURVEY STRIP -->
+<div class="survey-strip" id="free-survey">
+  <div class="survey-strip-inner">
+    <div class="survey-text">
+      <div class="survey-icon">🏠</div>
+      <div>
+        <div class="survey-title">Free Site Survey – Bilkul Free!</div>
+        <div class="survey-sub">Hamare expert aapke ghar aayenge, roof check karenge aur best system recommend karenge — koi charge nahi!</div>
+      </div>
+    </div>
+    <a href="#lead-form-section" class="btn btn-amber btn-md">Book Free Survey Now →</a>
+  </div>
+</div>
+
+<!-- ABOUT -->
+<section id="about" class="section-pad">
+  <div class="container">
+    <div class="about-grid">
+      <div class="photo-mosaic" data-reveal>
+        <div class="mosaic-img mosaic-main"><img src="https://images.unsplash.com/photo-1508514177221-188b1cf16e9d?w=800&q=80" alt="Solar panels on home" loading="lazy"></div>
+        <div class="mosaic-img mosaic-top"><img src="https://images.unsplash.com/photo-1497440001374-f26997328c1b?w=600&q=80" alt="Solar team" loading="lazy"></div>
+        <div class="mosaic-img mosaic-bot"><img src="https://images.unsplash.com/photo-1466611653911-95081537e5b7?w=600&q=80" alt="Solar field" loading="lazy"></div>
+        <div class="mosaic-badge"><span class="badge-num">500+</span><span class="badge-txt">Installations in UP</span></div>
+      </div>
+      <div class="about-copy">
+        <div data-reveal>
+          <span class="pill pill-amber" style="margin-bottom:14px;display:inline-flex;">About Avyan</span>
+          <h2 class="display-md sec-title">UP Ka Apna <span class="amber">Trusted</span> Solar Partner</h2>
+          <p class="body-md muted" style="margin-top:14px;">Avyan Enterprises — Uttar Pradesh ka ek bharosemand solar energy company. On-Grid, Off-Grid aur Hybrid solutions ke saath hum aapke ghar ko power plant banate hain. PM Surya Ghar authorized vendor hone ke naate hum subsidy bhi dilwate hain.</p>
+        </div>
+        <div class="feature-list">
+          <div class="feature-item" data-reveal data-delay="1"><div class="fi-icon">🏛️</div><div><div class="fi-title">PM Surya Ghar Authorized Vendor</div><div class="fi-desc">National Rooftop Solar Portal par listed. Subsidy seedha aapke bank mein — koi agent nahi, koi middle man nahi.</div></div></div>
+          <div class="feature-item" data-reveal data-delay="2"><div class="fi-icon">⚙️</div><div><div class="fi-title">Complete End-to-End Service</div><div class="fi-desc">Free site survey → DISCOM approval → professional installation → net metering → AMC. Sab kuch hum karte hain.</div></div></div>
+          <div class="feature-item" data-reveal data-delay="3"><div class="fi-icon">🛡️</div><div><div class="fi-title">Tier-1 Quality, 25-Year Warranty</div><div class="fi-desc">BIS-certified panels, branded inverters. 25-year panel warranty + 5-year installation warranty.</div></div></div>
+          <div class="feature-item" data-reveal data-delay="4"><div class="fi-icon">📍</div><div><div class="fi-title">Varanasi · Prayagraj · Mau · Ghazipur</div><div class="fi-desc">UP ke in sab areas mein hamari strong presence hai. Local expertise ke saath best service guaranteed.</div></div></div>
+        </div>
+        <div class="about-cta-row" data-reveal>
+          <a href="#lead-form-section" class="btn btn-lg btn-amber">Get Started Today</a>
+          <div class="trust-text"><strong>⭐ 4.9/5</strong> average rating<br>from 500+ customers</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SOLUTIONS -->
+<section id="solutions" class="section-pad">
+  <div class="solutions-bg"></div>
+  <div class="container" style="position:relative;z-index:1;">
+    <div class="sec-header center" data-reveal>
+      <span class="pill pill-amber" style="margin-bottom:14px;display:inline-flex;">Our Solutions</span>
+      <h2 class="display-lg white-title">Teen Systems, <span class="amber italic">Ek Mission</span></h2>
+      <p class="body-lg intro-text white-sub" style="margin-top:16px;">Varanasi, Prayagraj, Mau ya Ghazipur — har jagah ke liye perfect solar solution available hai.</p>
+    </div>
+    <div class="sol-grid">
+      <div class="sol-card" data-reveal data-delay="1">
+        <div class="sol-photo"><img src="https://images.unsplash.com/photo-1593941707874-ef25b8b4a92b?w=700&q=80" alt="On-grid rooftop" loading="lazy"><div class="sol-photo-overlay"></div><div class="sol-photo-tag"><span class="pill pill-green">Most Popular · Subsidy Eligible</span></div><div class="sol-photo-icon icon-on">⚡</div></div>
+        <div class="sol-body">
+          <div class="sol-name">On-Grid Solar</div>
+          <p class="sol-desc">UPPCL grid se connected. Panels daytime mein power dete hain aur surplus grid mein export hoti hai — meter ulta ghoomta hai, credits milte hain!</p>
+          <ul class="sol-feats">
+            <li class="sol-feat"><div class="feat-check"><svg viewBox="0 0 10 8" fill="none"><path d="M1 4l3 3 5-6" stroke="#F59E0B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div><span class="feat-text">PM Surya Ghar subsidy up to <strong style="color:var(--amber)">₹1,08,000</strong></span></li>
+            <li class="sol-feat"><div class="feat-check"><svg viewBox="0 0 10 8" fill="none"><path d="M1 4l3 3 5-6" stroke="#F59E0B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div><span class="feat-text">Net metering — UPPCL ko surplus bijli becho</span></li>
+            <li class="sol-feat"><div class="feat-check"><svg viewBox="0 0 10 8" fill="none"><path d="M1 4l3 3 5-6" stroke="#F59E0B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div><span class="feat-text">300 units free electricity har mahine</span></li>
+            <li class="sol-feat"><div class="feat-check"><svg viewBox="0 0 10 8" fill="none"><path d="M1 4l3 3 5-6" stroke="#F59E0B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div><span class="feat-text">No battery — sabse kam upfront cost</span></li>
+            <li class="sol-feat"><div class="feat-check"><svg viewBox="0 0 10 8" fill="none"><path d="M1 4l3 3 5-6" stroke="#F59E0B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div><span class="feat-text">3–4 saal mein full ROI</span></li>
+          </ul>
+          <div class="sol-price"><div class="sol-price-label">Starting From (After Subsidy)</div><div class="sol-price-val">₹75,000 for 1 kW · ₹1.3 Lakh for 3 kW</div></div>
+        </div>
+      </div>
+      <div class="sol-card" data-reveal data-delay="2">
+        <div class="sol-photo"><img src="https://images.unsplash.com/photo-1532601224476-15c79f2f7a51?w=700&q=80" alt="Off-grid solar" loading="lazy"><div class="sol-photo-overlay"></div><div class="sol-photo-tag"><span class="pill" style="background:rgba(59,130,246,.15);border:1px solid rgba(59,130,246,.3);color:#60a5fa;">Remote &amp; Rural · Battery Backup</span></div><div class="sol-photo-icon icon-off">🔋</div></div>
+        <div class="sol-body">
+          <div class="sol-name">Off-Grid Solar</div>
+          <p class="sol-desc">Grid se bilkul alag — battery bank se 24×7 power. Remote villages, farms aur jahan bijli nahi wahan ke liye perfect solution.</p>
+          <ul class="sol-feats">
+            <li class="sol-feat"><div class="feat-check"><svg viewBox="0 0 10 8" fill="none"><path d="M1 4l3 3 5-6" stroke="#F59E0B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div><span class="feat-text">100% energy independence</span></li>
+            <li class="sol-feat"><div class="feat-check"><svg viewBox="0 0 10 8" fill="none"><path d="M1 4l3 3 5-6" stroke="#F59E0B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div><span class="feat-text">Remote villages, Mau &amp; Ghazipur districts ke liye best</span></li>
+            <li class="sol-feat"><div class="feat-check"><svg viewBox="0 0 10 8" fill="none"><path d="M1 4l3 3 5-6" stroke="#F59E0B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div><span class="feat-text">24×7 uninterrupted power supply</span></li>
+            <li class="sol-feat"><div class="feat-check"><svg viewBox="0 0 10 8" fill="none"><path d="M1 4l3 3 5-6" stroke="#F59E0B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div><span class="feat-text">Lithium (10+ yr) ya Lead-Acid battery</span></li>
+            <li class="sol-feat"><div class="feat-check"><svg viewBox="0 0 10 8" fill="none"><path d="M1 4l3 3 5-6" stroke="#F59E0B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div><span class="feat-text">Zero monthly electricity bills</span></li>
+          </ul>
+          <div class="sol-price"><div class="sol-price-label">Starting From</div><div class="sol-price-val">₹1.5 Lakh for 2 kW · ₹3.5 Lakh for 5 kW</div></div>
+        </div>
+      </div>
+      <div class="sol-card" data-reveal data-delay="3">
+        <div class="sol-photo"><img src="https://images.unsplash.com/photo-1560472355-536de3962603?w=700&q=80" alt="Hybrid solar" loading="lazy"><div class="sol-photo-overlay"></div><div class="sol-photo-tag"><span class="pill pill-amber">Best of Both · Subsidy Eligible</span></div><div class="sol-photo-icon icon-hyb">🌐</div></div>
+        <div class="sol-body">
+          <div class="sol-name">Hybrid Solar</div>
+          <p class="sol-desc">Grid + smart battery. Daytime mein ghar chalao, batteries charge karo, aur load-shedding mein bhi nonstop power. Varanasi &amp; Prayagraj ke liye perfect!</p>
+          <ul class="sol-feats">
+            <li class="sol-feat"><div class="feat-check"><svg viewBox="0 0 10 8" fill="none"><path d="M1 4l3 3 5-6" stroke="#F59E0B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div><span class="feat-text">PM Surya Ghar subsidy ₹1,08,000 eligible</span></li>
+            <li class="sol-feat"><div class="feat-check"><svg viewBox="0 0 10 8" fill="none"><path d="M1 4l3 3 5-6" stroke="#F59E0B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div><span class="feat-text">Load-shedding mein bhi power uninterrupted</span></li>
+            <li class="sol-feat"><div class="feat-check"><svg viewBox="0 0 10 8" fill="none"><path d="M1 4l3 3 5-6" stroke="#F59E0B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div><span class="feat-text">Net metering + battery backup dono</span></li>
+            <li class="sol-feat"><div class="feat-check"><svg viewBox="0 0 10 8" fill="none"><path d="M1 4l3 3 5-6" stroke="#F59E0B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div><span class="feat-text">Smart inverter — all sources managed automatically</span></li>
+            <li class="sol-feat"><div class="feat-check"><svg viewBox="0 0 10 8" fill="none"><path d="M1 4l3 3 5-6" stroke="#F59E0B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div><span class="feat-text">Best for Varanasi, Prayagraj, Mau, Ghazipur</span></li>
+          </ul>
+          <div class="sol-price"><div class="sol-price-label">Starting From (After Subsidy)</div><div class="sol-price-val">₹2 Lakh for 3 kW · ₹3.5 Lakh for 5 kW</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SUBSIDY -->
+<section id="subsidy" class="section-pad">
+  <div class="container">
+    <div class="sec-header" data-reveal>
+      <span class="pill pill-green" style="margin-bottom:14px;display:inline-flex;">PM Surya Ghar Yojana</span>
+      <h2 class="display-lg sec-title">Sarkar Degi <span class="amber">₹1,08,000</span> —<br>Aap Lenge <span class="green-c">Free Bijli</span></h2>
+      <p class="body-lg intro-text" style="margin-top:16px;">PM Surya Ghar: Muft Bijli Yojana — India ka sabse bada residential solar scheme. ₹75,021 crore budget. Hum aapki poori subsidy application handle karte hain.</p>
+    </div>
+    <div class="subsidy-hero" data-reveal>
+      <div class="sub-photo-side"><img src="https://images.unsplash.com/photo-1612170153139-6f881ff067e0?w=800&q=80" alt="Family with solar" loading="lazy"><div class="sub-photo-overlay2"></div></div>
+      <div class="sub-content-side">
+        <span class="pill pill-white" style="margin-bottom:20px;display:inline-flex;position:relative;z-index:1;">🏛️ Government of India Scheme</span>
+        <h3 class="sub-title">300 Units Free Electricity <em style="font-style:italic;color:var(--amber)">Har Mahine!</em></h3>
+        <p class="sub-desc">Subsidy seedha aapke bank account mein DBT ke zariye — koi agent nahi, koi dalal nahi. Poori process digital aur transparent hai pmsuryaghar.gov.in par.</p>
+        <div class="sub-slabs">
+          <div class="slab"><div><div style="font-size:.8rem;color:rgba(255,255,255,.6);margin-bottom:2px;">1 kW System</div><div style="font-size:.88rem;color:rgba(255,255,255,.85);font-weight:600;">Chhote ghar / apartment ke liye</div></div><div class="slab-amount">₹30,000</div></div>
+          <div class="slab"><div><div style="font-size:.8rem;color:rgba(255,255,255,.6);margin-bottom:2px;">2 kW System</div><div style="font-size:.88rem;color:rgba(255,255,255,.85);font-weight:600;">Medium UP homes ke liye</div></div><div class="slab-amount">₹60,000</div></div>
+          <div class="slab" style="border-color:rgba(245,158,11,.35);background:rgba(245,158,11,.12);"><div><div style="font-size:.8rem;color:rgba(255,255,255,.6);margin-bottom:2px;">3 kW &amp; Above</div><div style="font-size:.88rem;color:rgba(255,255,255,.85);font-weight:600;">Maximum subsidy — sabse popular</div></div><div class="slab-amount">₹1,08,000 🏆</div></div>
+        </div>
+        <div class="sub-cta-row">
+          <a href="#lead-form-section" class="btn btn-amber btn-lg">Apply with Avyan →</a>
+          <a href="tel:+919876543210" class="btn btn-ghost-white btn-md">Call Now</a>
+        </div>
+      </div>
+    </div>
+    <div class="steps-row">
+      <div class="step-item" data-reveal data-delay="1"><div class="step-num">1</div><div class="step-name">Register Online</div><p class="step-desc">pmsuryaghar.gov.in par DISCOM consumer number se register karein. Hum help karte hain — poori paperless process.</p></div>
+      <div class="step-item" data-reveal data-delay="2"><div class="step-num">2</div><div class="step-name">Choose Avyan</div><p class="step-desc">Approved vendor list mein se Avyan select karein. Free site survey aur DPR hum banayenge.</p></div>
+      <div class="step-item" data-reveal data-delay="3"><div class="step-num">3</div><div class="step-name">Installation &amp; Inspection</div><p class="step-desc">1–2 din mein professional installation. UPPCL net meter connect aur govt. inspection arrange karein.</p></div>
+      <div class="step-item" data-reveal data-delay="4"><div class="step-num">4</div><div class="step-name">Subsidy in Bank ✅</div><p class="step-desc">Inspection ke 30 din mein DBT ke zariye subsidy seedha aapke bank mein!</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY US -->
+<section id="why" class="section-pad">
+  <div class="container">
+    <div class="sec-header center" data-reveal>
+      <span class="pill pill-amber" style="margin-bottom:14px;display:inline-flex;">Why Choose Us</span>
+      <h2 class="display-lg sec-title">Avyan Ko Kyun <span class="amber italic">Choose Karein?</span></h2>
+      <p class="body-lg intro-text" style="margin-top:16px;">Government expertise + Tier-1 quality + deep local UP knowledge = solar systems that work for 25+ years.</p>
+    </div>
+    <div class="why-grid">
+      <div class="why-card" data-reveal data-delay="1"><span class="why-emoji">🏛️</span><div class="why-title">Govt. Authorized Vendor</div><p class="why-desc">National Rooftop Solar Portal par listed. Sabhi DISCOM, UPPCL aur subsidy documents hum handle karte hain.</p></div>
+      <div class="why-card" data-reveal data-delay="2"><span class="why-emoji">🔬</span><div class="why-title">Tier-1 Quality Guarantee</div><p class="why-desc">BIS-certified panels &amp; inverters. 25-year panel performance warranty + 5-year installation warranty.</p></div>
+      <div class="why-card" data-reveal data-delay="3"><span class="why-emoji">📍</span><div class="why-title">Varanasi · Prayagraj · Mau · Ghazipur</div><p class="why-desc">UP ke in sab areas mein hamari strong team hai. UPPCL processes, local climate — sab kuch jaante hain.</p></div>
+      <div class="why-card" data-reveal data-delay="1"><span class="why-emoji">💰</span><div class="why-title">Zero Hidden Costs</div><p class="why-desc">Transparent, itemized quotes. Jo bola wahi lena. UP state subsidies bhi claim karne mein help karte hain.</p></div>
+      <div class="why-card" data-reveal data-delay="2"><span class="why-emoji">🛠️</span><div class="why-title">After-Sales Support</div><p class="why-desc">Annual Maintenance Contracts available. 24–48 ghante mein response guaranteed.</p></div>
+      <div class="why-card" data-reveal data-delay="3"><span class="why-emoji">📊</span><div class="why-title">Free Energy Audit</div><p class="why-desc">Aapke bills analyze karke exact right system recommend karte hain — zyada nahi, kam nahi. Maximum ROI.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY STRIP -->
+<section id="gallery">
+  <div style="padding:48px 0 0;text-align:center;">
+    <span class="pill pill-white" style="display:inline-flex;margin-bottom:8px;">📸 Hamare Kaam ki Jhalak — UP ke Across</span>
+  </div>
+  <div class="gallery-strip">
+    <div class="gallery-item"><img src="https://images.unsplash.com/photo-1508514177221-188b1cf16e9d?w=640&q=80" alt="Rooftop Varanasi" loading="lazy"><div class="gallery-item-cap">Residential · Varanasi</div></div>
+    <div class="gallery-item"><img src="https://images.unsplash.com/photo-1497440001374-f26997328c1b?w=640&q=80" alt="Solar farm Prayagraj" loading="lazy"><div class="gallery-item-cap">Agricultural · Prayagraj</div></div>
+    <div class="gallery-item"><img src="https://images.unsplash.com/photo-1466611653911-95081537e5b7?w=640&q=80" alt="Solar Mau" loading="lazy"><div class="gallery-item-cap">Solar Farm · Mau</div></div>
+    <div class="gallery-item"><img src="https://images.unsplash.com/photo-1509391366360-2e959784a276?w=640&q=80" alt="Hybrid Ghazipur" loading="lazy"><div class="gallery-item-cap">Hybrid Install · Ghazipur</div></div>
+    <div class="gallery-item"><img src="https://images.unsplash.com/photo-1593941707874-ef25b8b4a92b?w=640&q=80" alt="Rooftop panels" loading="lazy"><div class="gallery-item-cap">On-Grid · Varanasi</div></div>
+    <div class="gallery-item"><img src="https://images.unsplash.com/photo-1560472355-536de3962603?w=640&q=80" alt="Solar inverter" loading="lazy"><div class="gallery-item-cap">Hybrid System · Prayagraj</div></div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section id="process" class="section-pad">
+  <div class="process-bg"></div>
+  <div class="container" style="position:relative;z-index:1;">
+    <div class="process-grid">
+      <div data-reveal style="position:relative;">
+        <div class="process-photo"><img src="https://images.unsplash.com/photo-1612170153139-6f881ff067e0?w=800&q=80" alt="Solar installation" loading="lazy"><div class="process-photo-overlay"></div></div>
+        <div class="process-cert"><div class="process-cert-icon">🏆</div><div class="process-cert-text"><strong>PM Surya Ghar Certified</strong><span>National Rooftop Solar Portal Registered Vendor</span></div></div>
+      </div>
+      <div>
+        <div data-reveal>
+          <span class="pill pill-amber" style="margin-bottom:14px;display:inline-flex;">How It Works</span>
+          <h2 class="display-md white-title" style="margin-bottom:10px;">Sirf 2–4 Hafte Mein <span class="amber italic">Solar Ready!</span></h2>
+          <p class="body-md" style="color:rgba(255,255,255,.5);margin-bottom:36px;">Pehle call se lekar bijli banana shuru karne tak — poori process fast, transparent aur stress-free.</p>
+        </div>
+        <div class="process-steps">
+          <div class="pstep" data-reveal data-delay="1"><div class="pstep-num">01</div><div><div class="pstep-title">Free Consultation &amp; Site Survey</div><p class="pstep-desc">Hamare expert aapke ghar aayenge, roof area assess karenge aur optimal system design karenge — bilkul free.</p></div></div>
+          <div class="pstep" data-reveal data-delay="2"><div class="pstep-num">02</div><div><div class="pstep-title">Detailed Quote &amp; DISCOM Application</div><p class="pstep-desc">Transparent cost breakdown aur ROI analysis. Approve karne par hum UPPCL net metering application file karte hain.</p></div></div>
+          <div class="pstep" data-reveal data-delay="3"><div class="pstep-num">03</div><div><div class="pstep-title">Professional Installation</div><p class="pstep-desc">Certified technicians panels, inverter aur wiring install karte hain. 1–2 din mein kaam complete.</p></div></div>
+          <div class="pstep" data-reveal data-delay="4"><div class="pstep-num">04</div><div><div class="pstep-title">Inspection, Net Meter &amp; Subsidy</div><p class="pstep-desc">Govt. inspection arrange, net meter activate UPPCL se. 30 din mein subsidy aapke bank mein!</p></div></div>
+        </div>
+        <div style="margin-top:32px;" data-reveal><a href="#lead-form-section" class="btn btn-amber btn-lg">Start My Solar Journey →</a></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========================
+     LEAD FORM SECTION
+========================= -->
+<section id="lead-form-section" class="section-pad">
+  <div class="lead-form-bg"></div>
+  <div class="container">
+    <div class="lead-form-wrapper">
+      <!-- Left Info -->
+      <div class="lead-left" data-reveal>
+        <span class="pill pill-amber" style="margin-bottom:16px;display:inline-flex;"><span class="pill-dot"></span>Free Site Survey Available</span>
+        <h2 class="display-md" style="color:var(--white);margin-bottom:16px;">Aaj Hi Quote Lein — <span class="amber italic">Bilkul Free!</span></h2>
+        <p style="color:rgba(255,255,255,.55);font-size:.95rem;line-height:1.8;margin-bottom:32px;">
+          Yeh form bharo, hamare solar expert 24 ghante mein call karenge. Free site survey karenge, aur aapke liye best system recommend karenge — koi pressure nahi!
+        </p>
+        <div class="lead-benefits">
+          <div class="lead-benefit" data-reveal data-delay="1"><div class="lead-benefit-icon">🏠</div><span class="lead-benefit-text">Free site survey — ghar par aake assess karenge</span></div>
+          <div class="lead-benefit" data-reveal data-delay="2"><div class="lead-benefit-icon">💰</div><span class="lead-benefit-text">₹1,08,000 tak govt. subsidy dilwayenge</span></div>
+          <div class="lead-benefit" data-reveal data-delay="3"><div class="lead-benefit-icon">📄</div><span class="lead-benefit-text">Detailed ROI analysis aur transparent quote</span></div>
+          <div class="lead-benefit" data-reveal data-delay="4"><div class="lead-benefit-icon">⚡</div><span class="lead-benefit-text">End-to-end service — survey se subsidy tak</span></div>
+          <div class="lead-benefit"><div class="lead-benefit-icon">📍</div><span class="lead-benefit-text">Varanasi · Prayagraj · Mau · Ghazipur serving</span></div>
+        </div>
+      </div>
+
+      <!-- LEAD FORM CARD -->
+      <div class="lead-form-card" data-reveal>
+        <div class="lead-form-header">
+          <div class="lead-form-title">Free Quote &amp; Site Survey</div>
+          <p class="lead-form-sub">Form bharo — 24 ghante mein expert call karega 🌞</p>
+        </div>
+
+        <form id="leadForm" novalidate>
+          <div class="form-row2">
+            <div class="form-group">
+              <label class="form-label">Aapka Naam *</label>
+              <input class="form-input" type="text" id="lf_name" placeholder="Ramesh Kumar" required>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Mobile Number *</label>
+              <input class="form-input" type="tel" id="lf_phone" placeholder="+91 98765 43210" required>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">Email Address</label>
+            <input class="form-input" type="email" id="lf_email" placeholder="ramesh@gmail.com">
+          </div>
+
+          <div class="form-row2">
+            <div class="form-group">
+              <label class="form-label">City / District *</label>
+              <select class="form-select" id="lf_city" required>
+                <option value="">Select City</option>
+                <option>Varanasi</option>
+                <option>Prayagraj</option>
+                <option>Mau</option>
+                <option>Ghazipur</option>
+                <option>Other (UP)</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Solar Solution *</label>
+              <select class="form-select" id="lf_solution" required>
+                <option value="">Select Solution</option>
+                <option>On-Grid Solar (with subsidy)</option>
+                <option>Off-Grid Solar (battery backup)</option>
+                <option>Hybrid Solar (grid + battery)</option>
+                <option>Not Sure – Expert se baat karna hai</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-row2">
+            <div class="form-group">
+              <label class="form-label">Monthly Bijli Bill</label>
+              <select class="form-select" id="lf_bill">
+                <option value="">Select Range</option>
+                <option>₹500 – ₹1,000</option>
+                <option>₹1,000 – ₹2,500</option>
+                <option>₹2,500 – ₹5,000</option>
+                <option>₹5,000 – ₹10,000</option>
+                <option>₹10,000 se zyada</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Property Type</label>
+              <select class="form-select" id="lf_property">
+                <option value="">Select Type</option>
+                <option>Ghar / Home</option>
+                <option>Flat / Apartment</option>
+                <option>Dukan / Shop</option>
+                <option>Khet / Farm</option>
+                <option>Factory / Industry</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">Koi Sawaal? (Optional)</label>
+            <textarea class="form-textarea" id="lf_message" placeholder="Roof type, bijli cut frequency, ya koi specific question..."></textarea>
+          </div>
+
+          <button type="submit" class="form-submit-btn" id="submitBtn">
+            <span id="submitText">🌞 Free Survey Book Karein</span>
+          </button>
+        </form>
+
+        <p style="font-size:.72rem;color:var(--muted);text-align:center;margin-top:14px;">
+          🔒 Aapki details 100% safe hain. Hum kabhi spam nahi karte.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="section-pad">
+  <div class="container">
+    <div class="sec-header" data-reveal>
+      <span class="pill pill-amber" style="margin-bottom:14px;display:inline-flex;">Contact Us</span>
+      <h2 class="display-lg sec-title">Seedha <span class="amber italic">Baat Karein</span></h2>
+      <p class="body-lg intro-text" style="margin-top:16px;">Varanasi, Prayagraj, Mau ya Ghazipur — jahan bhi ho, hum wahan hain. Call karein, WhatsApp karein ya form bharo.</p>
+    </div>
+    <div class="contact-wrapper">
+      <div class="c-cards">
+        <div data-reveal><h3 class="display-sm" style="margin-bottom:20px;">Hamse Baat Karein</h3></div>
+        <div class="cinfo-card" data-reveal data-delay="1">
+          <div class="cinfo-icon"><i class="fas fa-phone-alt"></i></div>
+          <div><div class="cinfo-title">Call / WhatsApp</div><a href="tel:+919876543210" class="cinfo-val">+91 98765 43210</a><a href="tel:+919876543211" class="cinfo-val">+91 98765 43211</a><span class="cinfo-val" style="margin-top:5px;font-size:.75rem;color:var(--light);">Mon–Sat · 9AM to 7PM</span></div>
+        </div>
+        <div class="cinfo-card" data-reveal data-delay="2">
+          <div class="cinfo-icon"><i class="fas fa-envelope"></i></div>
+          <div><div class="cinfo-title">Email Us</div><a href="mailto:info@avyanenterprises.com" class="cinfo-val">info@avyanenterprises.com</a><span class="cinfo-val" style="margin-top:4px;font-size:.75rem;color:var(--light);">24 ghante mein reply</span></div>
+        </div>
+        <div class="cinfo-card" data-reveal data-delay="3">
+          <div class="cinfo-icon"><i class="fas fa-map-marker-alt"></i></div>
+          <div><div class="cinfo-title">Hamare Areas</div><p class="cinfo-val">Varanasi · Prayagraj · Mau · Ghazipur<br>Aur poore Uttar Pradesh mein service available</p></div>
+        </div>
+        <div class="govt-card" data-reveal data-delay="4">
+          <div class="cinfo-icon" style="background:rgba(255,255,255,.2);"><i class="fas fa-certificate" style="color:var(--amber);"></i></div>
+          <div><div class="cinfo-title">PM Surya Ghar Authorized</div><p class="cinfo-val">pmsuryaghar.gov.in par registered vendor. Subsidy portal se leke DBT transfer tak — sab hum karte hain.</p></div>
+        </div>
+      </div>
+      <div class="contact-form-box" data-reveal>
+        <div class="lead-form-title" style="font-family:var(--font-display);font-size:1.6rem;font-weight:800;color:var(--text);margin-bottom:6px;">Quick Enquiry</div>
+        <p style="font-size:.88rem;color:var(--muted);margin-bottom:28px;">Ya seedha <strong style="color:var(--amber2);">+91 98765 43210</strong> par call / WhatsApp karein!</p>
+        <div class="form-row2">
+          <div class="form-group"><label class="form-label">Naam</label><input class="form-input" type="text" placeholder="Ramesh Kumar"></div>
+          <div class="form-group"><label class="form-label">Mobile</label><input class="form-input" type="tel" placeholder="+91 98765 43210"></div>
+        </div>
+        <div class="form-group">
+          <label class="form-label">City</label>
+          <select class="form-select">
+            <option>Varanasi</option><option>Prayagraj</option><option>Mau</option><option>Ghazipur</option><option>Other UP</option>
+          </select>
+        </div>
+        <div class="form-group"><label class="form-label">Message</label><textarea class="form-textarea" placeholder="Aapka sawaal ya requirement..." style="min-height:80px;"></textarea></div>
+        <button class="form-submit-btn" onclick="alert('Shukriya! Hum jald contact karenge.')">Send Message →</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer id="footer">
+  <div class="footer-inner">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="footer-brand-logo">
+          <!-- ACTUAL LOGO PNG -->
+          <img src="data:image/png;base64,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" alt="Avyan Enterprises" onerror="this.style.display='none'">
+          <div id="footer-logo-fallback" style="font-family:'Playfair Display',serif;font-size:1.1rem;font-weight:800;color:#fff;line-height:1.15;">
+            <span style="color:var(--amber);">Avyan</span><br>Enterprises<br><span style="font-size:.55rem;font-weight:700;color:var(--amber);letter-spacing:.14em;text-transform:uppercase;font-family:'Plus Jakarta Sans',sans-serif;">Your Solar Partner</span>
+          </div>
+        </div>
+        <p>Uttar Pradesh ka trusted solar energy partner. Varanasi, Prayagraj, Mau, Ghazipur aur poore UP mein clean power solutions. PM Surya Ghar authorized vendor.</p>
+        <!-- SOCIAL ICONS using Font Awesome -->
+        <div class="footer-social">
+          <a href="#" class="social-btn fb" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" class="social-btn ig" title="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="#" class="social-btn yt" title="YouTube"><i class="fab fa-youtube"></i></a>
+          <a href="https://wa.me/919876543210" class="social-btn wa" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h5>Solutions</h5>
+        <ul>
+          <li><a href="#solutions">On-Grid Solar</a></li>
+          <li><a href="#solutions">Off-Grid Solar</a></li>
+          <li><a href="#solutions">Hybrid Solar</a></li>
+          <li><a href="#subsidy">PM Surya Ghar</a></li>
+          <li><a href="#lead-form-section">Free Site Survey</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h5>Company</h5>
+        <ul>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#why">Why Choose Us</a></li>
+          <li><a href="#process">Our Process</a></li>
+          <li><a href="#gallery">Our Work</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h5>Areas Served</h5>
+        <ul>
+          <li><a href="#"><i class="fas fa-map-marker-alt" style="color:var(--amber);margin-right:6px;font-size:.75rem;"></i>Varanasi</a></li>
+          <li><a href="#"><i class="fas fa-map-marker-alt" style="color:var(--amber);margin-right:6px;font-size:.75rem;"></i>Prayagraj</a></li>
+          <li><a href="#"><i class="fas fa-map-marker-alt" style="color:var(--amber);margin-right:6px;font-size:.75rem;"></i>Mau</a></li>
+          <li><a href="#"><i class="fas fa-map-marker-alt" style="color:var(--amber);margin-right:6px;font-size:.75rem;"></i>Ghazipur</a></li>
+          <li><a href="#" style="color:rgba(255,255,255,.3);font-size:.78rem;">+ Poore UP mein service</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>© 2025 Avyan Enterprises. All Rights Reserved. Varanasi · Prayagraj · Mau · Ghazipur · Uttar Pradesh</p>
+      <div class="footer-badge">🏛️ PM Surya Ghar Authorized Vendor</div>
+    </div>
+  </div>
+</footer>
+
+<!-- WhatsApp Float -->
+<div class="wa-float">
+  <div class="wa-label">WhatsApp Karein</div>
+  <a class="wa-btn" href="https://wa.me/919876543210?text=Namaste%20Avyan%20Enterprises!%20Mujhe%20solar%20ke%20baare%20mein%20jaankari%20chahiye." target="_blank" rel="noopener" aria-label="WhatsApp">
+    <i class="fab fa-whatsapp" style="font-size:1.7rem;"></i>
+  </a>
+</div>
+
+<script>
+// ============ GOOGLE SHEETS LEAD FORM ============
+// Replace this URL with your actual Google Apps Script Web App URL
+const SHEET_URL = "https://script.google.com/macros/s/AKfycbxsTTcpKst_ExMKd6t_DWOF_gWkxSv8YNH0UwvBvByszDUD7PlfNH0x4-IGC7NRyvG3/exec";
+
+document.getElementById("leadForm").addEventListener("submit", async function(e) {
+  e.preventDefault();
+
+  const name     = document.getElementById("lf_name").value.trim();
+  const phone    = document.getElementById("lf_phone").value.trim();
+  const email    = document.getElementById("lf_email").value.trim();
+  const city     = document.getElementById("lf_city").value;
+  const solution = document.getElementById("lf_solution").value;
+  const bill     = document.getElementById("lf_bill").value;
+  const property = document.getElementById("lf_property").value;
+  const message  = document.getElementById("lf_message").value.trim();
+
+  // Basic validation
+  if (!name || !phone || !city || !solution) {
+    alert("Kripaya naam, phone, city aur solution zaroor bharo!");
+    return;
+  }
+  if (phone.replace(/\D/g,"").length < 10) {
+    alert("Valid 10-digit mobile number daalo.");
+    return;
+  }
+
+  const submitBtn  = document.getElementById("submitBtn");
+  const submitText = document.getElementById("submitText");
+  submitBtn.disabled = true;
+  submitText.textContent = "⏳ Submitting...";
+
+  const formData = new FormData();
+  formData.append("timestamp", new Date().toLocaleString("en-IN",{timeZone:"Asia/Kolkata"}));
+  formData.append("name",     name);
+  formData.append("phone",    phone);
+  formData.append("email",    email || "—");
+  formData.append("city",     city);
+  formData.append("solution", solution);
+  formData.append("bill",     bill || "—");
+  formData.append("property", property || "—");
+  formData.append("message",  message || "—");
+
+  try {
+    // Send to Google Sheets
+    await fetch(SHEET_URL, { method:"POST", body: formData, mode:"no-cors" });
+  } catch(err) {
+    // no-cors mode always catches here — still counts as sent
+  }
+
+  // Show success notification
+  document.getElementById("notifDetail").innerHTML =
+    "<strong>👤 Naam:</strong> " + name + "<br>" +
+    "<strong>📞 Phone:</strong> " + phone + "<br>" +
+    "<strong>📍 City:</strong> " + city + "<br>" +
+    "<strong>☀️ Solution:</strong> " + solution + "<br><br>" +
+    "Yeh data hamare Google Sheet mein save ho gaya hai. Expert jald contact karega!";
+  document.getElementById("notifOverlay").classList.add("show");
+
+  // Reset form
+  document.getElementById("leadForm").reset();
+  submitBtn.disabled = false;
+  submitText.textContent = "🌞 Free Survey Book Karein";
+});
+
+function closeNotif() {
+  document.getElementById("notifOverlay").classList.remove("show");
+}
+// Close on overlay click
+document.getElementById("notifOverlay").addEventListener("click", function(e) {
+  if (e.target === this) closeNotif();
+});
+
+// ============ NAV SCROLL ============
+const nav = document.getElementById("nav");
+window.addEventListener("scroll", () => {
+  nav.classList.toggle("scrolled", window.scrollY > 40);
+}, { passive:true });
+
+// ============ HAMBURGER ============
+const ham = document.getElementById("hamburger");
+const mob = document.getElementById("mobileMenu");
+ham.addEventListener("click", () => {
+  ham.classList.toggle("open");
+  mob.classList.toggle("open");
+});
+function closeMobileMenu() {
+  ham.classList.remove("open");
+  mob.classList.remove("open");
+}
+
+// ============ SCROLL REVEAL ============
+const revEls = document.querySelectorAll("[data-reveal]");
+const revObs = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      const delay = e.target.dataset.delay || 0;
+      setTimeout(() => e.target.classList.add("revealed"), delay * 100);
+      revObs.unobserve(e.target);
+    }
+  });
+}, { threshold:.1, rootMargin:"0px 0px -60px 0px" });
+revEls.forEach(el => revObs.observe(el));
+
+// ============ ACTIVE NAV ============
+const secs  = document.querySelectorAll("section[id]");
+const navAs = document.querySelectorAll(".nav-links a");
+window.addEventListener("scroll", () => {
+  let cur = "";
+  secs.forEach(s => { if (window.scrollY >= s.offsetTop - 100) cur = s.id; });
+  navAs.forEach(a => { a.classList.toggle("active", a.getAttribute("href") === "#" + cur); });
+}, { passive:true });
+
+// ============ GALLERY DRAG SCROLL ============
+const strip = document.querySelector(".gallery-strip");
+let isDown = false, startX, scrollLeft;
+strip.addEventListener("mousedown",  e => { isDown = true; startX = e.pageX - strip.offsetLeft; scrollLeft = strip.scrollLeft; });
+strip.addEventListener("mouseleave", () => isDown = false);
+strip.addEventListener("mouseup",    () => isDown = false);
+strip.addEventListener("mousemove",  e => {
+  if (!isDown) return;
+  e.preventDefault();
+  strip.scrollLeft = scrollLeft - (e.pageX - strip.offsetLeft - startX) * 1.5;
+});
+</script>
+</body>
+</html>
